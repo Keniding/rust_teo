@@ -5,3 +5,12 @@ version = 4
 [[package]]
 name = "rust_teo"
 version = "0.1.0"
+dependencies = [
+ "slice",
+]
+
+[[package]]
+name = "slice"
+version = "0.0.4"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "a48d174c11a0755b515b7e09f63f10dec39f2d6b9911a8cefacbcc77c664f937"

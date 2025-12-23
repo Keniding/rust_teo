@@ -1,9 +1,11 @@
+mod slice;
+
 fn main() {
-    {                      // s is not valid here, since it's not yet declared
+    { // s is not valid here, since it's not yet declared
         let s = "hello";   // s is valid from this point forward
         println!("{}", s);
         // do stuff with s
-    }                      // this scope is now over, and s is no longer valid
+    } // this scope is now over, and s is no longer valid
 
     // StringType. Este tipo gestiona los datos asignados en el montón y, por lo tanto, puede almacenar una cantidad de texto desconocida en tiempo de compilación.
     let mut s = String::from("hello");
@@ -119,6 +121,8 @@ fn main() {
     let reference_to_nothing = no_dangle();
     println!("reference_to_nothing = {}", reference_to_nothing);
 
+    /* Slice */
+    slice::slice();
 } // Here, x goes out of scope, then s. However, because s's value was moved,
 // nothing special happens. || Here, s3 goes out of scope and is dropped. s2 was moved, so nothing
 // happens. s1 goes out of scope and is dropped.
